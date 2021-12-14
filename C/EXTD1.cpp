@@ -17,8 +17,6 @@
     #define Falso 0
     listaInteiros aLista;
 
-
-
    typedef struct Lista {
        int dados[maxlista];
        int ultimo;
@@ -28,8 +26,6 @@
 
     void inicializaLista () {
         aLista.ultimo = -1;
-
-        
     }
     
     void destroiLista ()
