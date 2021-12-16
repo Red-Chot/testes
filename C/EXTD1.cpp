@@ -147,6 +147,34 @@
         }
     }
 
+     int posicaoNaLista (int dado)
+    {
+        if(listaVazia () == Verdadeiro)
+            return ErroListaVazia;
+        
+        else{
+            
+            for (int cont=0;cont<=aLista.ultimo;cont++)
+            {
+                if(aLista.dados[cont] == dado)
+                    return cont;
+            }
+            return ErroPosicao;
+        }
+    }
+
+    int retiraListaEspecifico (int dado)
+    {
+        int resp;
+        resp = posicaoNaLista(dado);
+            if (resp <0)
+                return resp;
+            else
+                {
+                    resp = retiraListaNaPosicao (resp);
+                    return resp;
+                }
+    }   
 
     void mostraLista ()
     {
@@ -162,10 +190,25 @@
         }
     }
 
+    int contemNaLista (int dado)
+    {
+        if(listaVazia () == Verdadeiro)
+            return ErroListaVazia;
+        
+        else{
+            
+            for (int cont=0;cont<=aLista.ultimo;cont++)
+            {
+                if(aLista.dados[cont] == dado)
+                    return Verdadeiro;
+            }
+            return Falso;
+        }
+    }
+
     //-----------------------------------------MAIN-------------------------------------------------
     int main (){
         int pos;
-
         inicializaLista ();
         mostraLista ();
         
