@@ -83,6 +83,27 @@
         }
     }
 
+     int adicionaListaNaPosicao (int add, int posicao)
+    {
+        if (listaCheia () == Verdadeiro)
+            return ErroListaCheia;
+        else
+        {
+            int cont;
+            if (posicao < 0 || posicao > aLista.ultimo)
+                return ErroPosicao;
+                else{
+                     aLista.ultimo++;
+                    for(cont = aLista.ultimo; cont > posicao; cont --)
+                    {
+                    aLista.dados[cont] = aLista.dados[cont-1];
+                    }
+                    aLista.dados[posicao] = add;
+                    return aLista.ultimo;
+            }
+        }
+    }
+
     int retiraLista ()
     {
         if(listaVazia()== Verdadeiro)
@@ -92,6 +113,40 @@
             return aLista.ultimo;
         }
     }
+
+     int retiraListaNoInicio ()
+    {
+        if(listaVazia()== Verdadeiro)
+            return ErroListaVazia;
+        else{
+            aLista.ultimo--;
+            for(int cont = 0; cont <=aLista.ultimo; cont++)
+            {
+                aLista.dados[cont] = aLista.dados [cont+1];
+            }
+            return aLista.ultimo;
+        }
+    }
+
+    int retiraListaNaPosicao (int posicao)
+    {
+        if(listaVazia()== Verdadeiro)
+            return ErroListaVazia;
+        else{
+            int cont;
+            if (posicao < 0 || posicao > aLista.ultimo)
+                return ErroPosicao;
+                else{
+                    aLista.ultimo--;
+                    for(int cont = posicao; cont <=aLista.ultimo; cont++)
+                    {
+                        aLista.dados[cont] = aLista.dados [cont+1];
+                    }
+            return aLista.ultimo;
+                }
+        }
+    }
+
 
     void mostraLista ()
     {
@@ -109,6 +164,8 @@
 
     //-----------------------------------------MAIN-------------------------------------------------
     int main (){
+        int pos;
+
         inicializaLista ();
         mostraLista ();
         
@@ -116,7 +173,7 @@
         destroiLista();
         return 0;
     }
-
+//1:32
 
 
 // 0:45 29nov
