@@ -9,6 +9,9 @@
     ERROPOSIÇÃO = -3
 
     */
+    
+    
+
     #define maxlista 8
     #define ErroListaCheia -2
     #define ErroListaVazia -3
@@ -23,7 +26,7 @@
    } listaInteiros;
     
     //--------------------------------------FUNÇOES--------------------------------------------------
-
+    
     void inicializaLista () {
         aLista.ultimo = -1;
     }
@@ -209,13 +212,28 @@
     //-----------------------------------------MAIN-------------------------------------------------
     int main (){
         int pos;
+        char sair = 'n';
+        while (sair == 'n' || sair == 'N')
+        {
+        printf("-------------------------------------------------------------------");
+        printf ("\nEscolha uma funçao para q seja utilizada");
+        printf("-------------------------------------------------------------------");
+        
         inicializaLista ();
         mostraLista ();
         
 
         destroiLista();
+
+
         return 0;
+
+
+        }
     }
+  
+
+    
 //1:32
 
 
