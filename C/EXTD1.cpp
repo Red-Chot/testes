@@ -211,25 +211,81 @@
 
     //-----------------------------------------MAIN-------------------------------------------------
     int main (){
-        int pos;
-        char sair = 'n';
-        while (sair == 'n' || sair == 'N')
-        {
-        printf("-------------------------------------------------------------------");
-        printf ("\nEscolha uma funçao para q seja utilizada");
-        printf("-------------------------------------------------------------------");
-        
+        int num, resp, pos;
+        char voltar= 's';
         inicializaLista ();
         mostraLista ();
-        
+    while (voltar == 's' || voltar == 'S')
+    {
+        /*resp=adicionaLista(58);
+        if (resp>= 0)
+            printf ("\nElemento adicionado");
+        else if (resp== -2)
+            printf ("\nA lista esta cheia, elemento  nao adicionado");
+        else
+            printf ("\nElemento nao adicionado");
+        mostraLista();
 
-        destroiLista();
+        printf ("\nQual valor quer adicionar??");
+        scanf("%d", &num);
+        if(adicionaLista(num)>=0)
+            printf("\nElemento %d nao adicionado!",num);
+        else
+            printf("\nElemenro nao adicionado");
+        mostraLista ();
 
+        printf("\nQual valor deseja adicionar?");
+        scanf ("%d", &num);
+    printf("Em qual posição deseja add",num);
+    scanf("%d",pos);
+    resp=adicionaListaNaPosicao(num,pos);
+    if(resp>=0)
+        printf("\nElemento %d adicionado na posição %d", num,pos);
+    else if (resp == -2)
+        printf("\nA lista esta cheia");
+    else if (resp == -4)
+        printf ("\n a posiçaõ nao existe %d",pos);
+    else
+        printf("Elemento nao adicionado");
+    mostraLista ();
 
-        return 0;
+    printf ("\nQual valor quer remover??");
+        scanf("%d", &num);
+        resp = retiraListaEspecifico (num);
+          if (resp>=-1)
+            printf("Elemento %d removido",num);
+        else if (resp == -3)
+            printf("\n a lista esta vazia");
+        else if(resp == -4)
+            printf("A posição nao existe");
+        else
+            printf("\n elemento nao removido");
+        mostraLista ();
 
+        printf("\n Qual elemento ");
 
-        }
+        printf("\nEm qual posiçao deseja remover?");
+        scanf("%d", &pos);
+        resp = retiraListaNaPosicao (pos);
+        if (resp>=-1)
+            printf("Elemento removido");
+        else if (resp == -3)
+            printf("\n a lista esta vazia");
+        else if(resp == -4)
+            printf("A posição nao existe");
+        else
+            printf("\n elemento nao removido");*/
+        adicionaListanoInicio (5);
+        adicionaLista (6);
+        retiraListaEspecifico (5);
+        retiraListaNaPosicao (2);
+        retiraListaNoInicio ();
+        retiraLista ();
+        adicionaListaNaPosicao(1,5);
+        contemNaLista(6);
+        mostraLista ();
+
+     }
     }
   
 
@@ -237,4 +293,4 @@
 //1:32
 
 
-// 0:45 29nov
+// 0:45 29nov   https://www.youtube.com/watch?v=tM7EByVc_lk
