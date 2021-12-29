@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.center{
+    max-width:  1200px;
+    margin: auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    background-color: white;
+    padding: 25px 0;
+    border-bottom: 10px solid rgb(204, 200, 200);
+
+}
+
+.logos{
+    color: rgba(42, 139, 193, 25);
+    margin: 15px 0;
+    margin-right: 170px;
+}
+
+.logos h2 {
+    font-weight: normal;
+    font-size:  25px;
+}
+
+.menu{
+    width:  70%;
+    text-align: right;
+    margin: 15px 0;
+}
+
+.menu a{
+    color: #124265
+    font-size 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 25px;
+    transition: 0.s;
+}
+
+.menu a:hover {
+    color:  #007bff;
+
+}
+
+.menu .botao {
+    background-color: rgba(42, 139, 193);
+    display: inline-block;
+    padding: 7px 50px;
+    border-radius: 9px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu .botao:hover{
+    background-color: #2371a8;
+    color: white;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------main------------------------------------------------- */
+
+section.main{
+    background-image: url('E32-U9WXEAMjdgQ.jpg');
+    min-height:  700px;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main_cta{
+    width: 100%;
+    margin: 60px 0;
+    text-align: center;
+    
+}
+.main_cta h2 {
+    color: rgba(42, 139, 193);
+    font-size: 40px;
+    margin: 1px;
+    background-color: rgba(255, 255, 255, 0.219);
+    padding: 7px 6px;
+    border-radius: 300 px;
+}
+
+
+.main_cta p {
+    color: rgb(255, 255, 255);
+    font-size:  19px;
+    margin: 10px 0;
+}
+
+.main_cta botton {
+    background-color: rgba(42, 139, 193);
+    display: inline-block;
+    padding: 10px 70px;
+    border-radius: 9px;
+    color: white;
+    border-radius: 6px;
+    font-size: 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+.diferencas{
+    display: flex;
+}
+
+.diferencial{
+    background-color: rgb(255, 255, 255);
+    width: 19999%;
+    margin-right: 2%;
+
+}
