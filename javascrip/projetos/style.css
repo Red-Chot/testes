@@ -223,7 +223,25 @@ section.conquistas{
 font-size: 15px;
 }
 
+.hexa{
+    display: inline-block;
+    width: 180px;
+    height: 140px;
+    margin: relative;
+    margin-top: 2%;
+    margin-left: 2%;
+    line-height: 10px;
+}
 
+.hexa .shape{
+    position: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #444; 
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
 
 
 @media screen and (max-width: 800px){
