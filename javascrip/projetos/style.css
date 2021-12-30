@@ -204,6 +204,7 @@ section.sobre {
 section.conquistas{
     background-color: rgb(212, 212, 214);
     padding: 35px 0;
+
 }
 
 .conquista{
@@ -230,12 +231,23 @@ font-size: 15px;
     margin-bottom: 20px;
     }
     .menu{
-        width: 100%;
         display: none;
-        text-align: right;
+    }
+    .logos{
+        width: 20%;
     }
     .menu-mobile{
+        width: 90%; 
+        text-align: right;
+        margin-top: -52px;
         display: block;
+        
+    }
+
+    .menu-mobile i{
+        cursor: pointer;
+        font-size: 23px;
+        margin-top: 8px;
     }
     .conteudo {width: 100%; margin: 20px 20px;}
 
