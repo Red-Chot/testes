@@ -17,7 +17,7 @@
 header{
     background-color: white;
     padding: 25px 0;
-    border-bottom: 10px solid rgb(204, 200, 200);
+    /*border-bottom: 10px solid rgb(204, 200, 200);*/
 
 }
 
@@ -44,7 +44,7 @@ header{
     text-decoration: none;
     display: inline-block;
     margin-right: 25px;
-    transition: 0.s;
+    /*transition: 0.s; */
 }
 
 .menu a:hover {
@@ -71,7 +71,8 @@ header{
 
 section.main{
     background-image: url('E32-U9WXEAMjdgQ.jpg');
-    min-height:  700px;
+
+    padding: 80px 0;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -80,7 +81,6 @@ section.main{
 
 .main_cta{
     width: 100%;
-    margin: 60px 0;
     text-align: center;
     
 }
@@ -88,7 +88,8 @@ section.main{
     color: rgba(42, 139, 193);
     font-size: 40px;
     margin: 1px;
-    background-color: rgba(255, 255, 255, 0.219);
+    background-color: rgba(255, 255, 255, 0.700);
+    border-radius: 10px;
     padding: 7px 6px;
     border-radius: 300 px;
 }
@@ -110,15 +111,74 @@ section.main{
     font-size: 20px;
     border: 0;
     cursor: pointer;
+    margin-bottom: 150px;
 }
 
 .diferencas{
+
     display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .diferencial{
-    background-color: rgb(255, 255, 255);
-    width: 19999%;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.750);
+    width: 23%;
     margin-right: 2%;
+    padding: 50px 20px;
+    margin-bottom: 50px;
+}
 
+.diferencial i{
+    color: #124265;
+    font-size: 23px;
+
+}
+
+.diferencial h2{
+    color: #124265;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.diferencial p{
+    font-size: 15px;
+    color: gray;
+    line-height: 30px;
+
+}
+
+section.sobre {
+    padding: 80px 0;
+}
+
+.chamada{
+    width: 100%;
+    text-align: center;
+
+}
+
+.chamada h2{
+    color: #124265;
+}
+
+.chamada p{
+    font-size: 15px;
+    color: gray;
+    margin: 10px;
+}
+
+.conteudo{
+    display: flex;
+}
+
+.conteudo p{
+    margin: 15px;
+}
+
+@media screen and (max-width: 800px){
+    .diferencial{width: 100%;
+    margin-bottom: 20px;
+    }
 }
