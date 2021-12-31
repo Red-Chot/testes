@@ -270,6 +270,40 @@ section.team .habi{
     color: #ccc;
     margin:  10px 0;
     font-size: 14px;
+    
+}
+.adm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.conteiner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.hexagon
+{
+    position: relative;
+    width: 20px;
+    height: 70px;
+    margin: 50px 20px 70px;
+}
+
+.shape{
+    top: 1500px;
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: 30%;
+    background-color: #444;
+    clip-path: polygon(0 25%,50% 0,100% 25%, 100% 75%,50% 100%,0 75%);
 }
 
 @media screen and (max-width: 800px){
