@@ -29,7 +29,14 @@
                 </a>
             </div>
         <div class="menu-mobile">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars menu-mobile-icon"></i>
+            <div class="menu-items">
+                <a href="">Home</a>
+                <a href="">Sobre nós</a>
+                <a href="">Formulários</a>
+                <a href="">Jogos</a>
+                <a href="">Entrar</a>
+            </div>
         </div>
         </div> <!--centro-->
 
@@ -119,37 +126,34 @@
     </section>
 
     <section class="team">
-    <div class="content">
-        <div class="hexa">
-            <div class="shape">
-                
-            </div> <!--SHAPE HEXA-->
+        <div class="center">
+            <div class="habi">
+            <h2>
+                Adminsistração
+            </h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsa,
+            </p>
+            </div>
+
         </div>
-        <div class="hexa">
-            <div class="shape">
-                
-            </div> <!--SHAPE HEXA-->
-        </div>
-        <div class="hexa">
-            <div class="shape">
-                
-            </div> <!--SHAPE HEXA-->
-        </div>
-        <div class="hexa">
-            <div class="shape">
-                
-            </div> <!--SHAPE HEXA-->
-        </div>
-    </div>
     </section>
 
+    <script>
+        var el = document.querySelector('.menu-mobile-icon')
+        el.addEventListener('click',()=>{
+            var menuItems = document.querySelector('.menu-items');
+            if(menuItems.classList.contains('show')){
+            menuItems.classList.add('hide')
+            menuItems.classList.remove('show')
+        }
+            else{
+                menuItems.classList.add('show')
+                menuItems.classList.remove('hide')
+            }
 
-
-
-
-
-
-
+        });
+    </script>
 
 </body>
 </html>
@@ -166,4 +170,4 @@
 
 
 
-<!--52-->
+<!--44-->

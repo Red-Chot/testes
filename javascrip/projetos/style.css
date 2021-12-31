@@ -48,7 +48,7 @@ header{
     text-decoration: none;
     display: inline-block;
     margin-right: 25px;
-    /*transition: 0.s; */
+    transition: 0.6s; 
 }
 
 .menu a:hover {
@@ -223,26 +223,54 @@ section.conquistas{
 font-size: 15px;
 }
 
-.hexa{
-    display: inline-block;
-    width: 180px;
-    height: 140px;
-    margin: relative;
-    margin-top: 2%;
-    margin-left: 2%;
-    line-height: 10px;
-}
-
-.hexa .shape{
-    position: flex;
-    top: 0;
+.menu-items{
+    position: absolute;
     left: 0;
+    top: 90px;
     width: 100%;
-    height: 100%;
-    background: #444; 
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    text-align: center;
+    background-color: white;
+    border-bottom: 2px solid blue;
+    display: block;
+    opacity: 0;
+    transition: 1s;
 }
 
+.menu-items.show{
+    opacity: 1;
+}
+
+.menu-items.hide{
+    opacity: 0;
+}
+
+.menu-items a{
+    display: block;
+    text-decoration: none;
+    color: blue;
+}
+
+section.team{
+    padding: 40px 0;
+    margin-right: 0;
+    margin-left:350px;
+}
+
+section.team .habi{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.habi h2{
+    color: #124265;
+
+}
+
+.habi p{
+    color: #ccc;
+    margin:  10px 0;
+    font-size: 14px;
+}
 
 @media screen and (max-width: 800px){
     .diferencial{width: 100%;
