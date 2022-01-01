@@ -28,7 +28,7 @@ header{
 .logos{
     color: rgba(42, 139, 193, 25);
     margin: 15px 0;
-    margin-right: 170px;
+    margin-right: 160px;
 }
 
 .logos h2 {
@@ -226,6 +226,8 @@ section.conquistas{
 font-size: 15px;
 }
 
+
+
 .menu-items{
     position: absolute;
     left: 0;
@@ -312,6 +314,31 @@ margin: 0 auto;
     max-width: 100%;
     display: block;
 }
+
+.png{
+    background-image: url(/javascrip/projetos/fotos/texture-g02a3dce74_1920.jpg);
+    padding: 150px 0;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.scrip{
+    margin-left: 200px;
+    
+}
+
+.rodae{
+    display: flex;
+    filter: none;
+    
+}
+
+.scrip p{
+    font-size: 20px;
+}
+
 @media screen and (max-width: 800px){
     .diferencial{width: 100%;
     margin-bottom: 20px;
@@ -327,7 +354,10 @@ margin: 0 auto;
         text-align: right;
         margin-top: -52px;
         display: block;
-        
+    }
+
+    .menu-mobile a{
+        padding: 15px;
     }
 
     .menu-mobile i{
