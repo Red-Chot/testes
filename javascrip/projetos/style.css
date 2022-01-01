@@ -74,7 +74,7 @@ header{
 /* ------------------------------------------------main------------------------------------------------- */
 
 section.main{
-    background-image: url('E32-U9WXEAMjdgQ.jpg');
+    background-image: url('/javascrip/projetos/fotos/E32-U9WXEAMjdgQ.jpg');
 
     padding: 80px 0;
     background-position: top;
@@ -189,7 +189,7 @@ section.sobre {
 }
 
 .conteudo a{
-    background-color: rgba(42, 139, 193);
+    background-color: rgb(42, 139, 193);
     display: flex;
     padding: 12px 12px;
     border-radius: 9px;
@@ -272,38 +272,15 @@ section.team .habi{
     font-size: 14px;
     
 }
-.adm{
+
+.center-box{
+    margin-top: 30px;
+    padding: 60px;
+    text-align: center;
+}
+
+.photo{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.conteiner{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    
-}
-
-.hexagon
-{
-    position: relative;
-    width: 20px;
-    height: 70px;
-    margin: 50px 20px 70px;
-}
-
-.shape{
-    top: 1500px;
-    position: absolute;
-    left: 0;
-    width: 20%;
-    height: 30%;
-    background-color: #444;
-    clip-path: polygon(0 25%,50% 0,100% 25%, 100% 75%,50% 100%,0 75%);
 }
 
 @media screen and (max-width: 800px){
