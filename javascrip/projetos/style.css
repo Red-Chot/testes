@@ -122,7 +122,7 @@ section.main{
 
     display: flex;
     flex-wrap: wrap;
-    
+    margin-left: 20px;
 }
 
 .diferencial{
@@ -203,14 +203,17 @@ section.sobre {
 
 section.conquistas{
     background-color: rgb(212, 212, 214);
-    padding: 35px 0;
+    padding:50px 0;
+    flex-wrap: wrap;
 
 }
 
 .conquista{
     width: 22%;
-    margin-right: 26px;
+    margin-right: 35px;
+    margin: 10px;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 
@@ -251,14 +254,17 @@ font-size: 15px;
 }
 
 section.team{
+    display: flex;
     padding: 40px 0;
     margin-right: 0;
     margin-left:350px;
+    
 }
 
 section.team .habi{
     text-align: center;
     text-transform: uppercase;
+    
 }
 
 .habi h2{
@@ -274,15 +280,38 @@ section.team .habi{
 }
 
 .center-box{
+    display: block;
     margin-top: 30px;
     padding: 60px;
     text-align: center;
+    margin: auto;
+    margin-left:-20px;
 }
 
 .photo{
-    display: flex;
+
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+max-width: 800px;
+margin: 0 auto;
+
 }
 
+.admin{
+    display: inline-block;
+    margin-left: 25px;
+    margin-bottom: 300px;
+    width: 300px;
+    height: 100px;
+    flex: 1 1 200px;
+    
+}
+
+.admin img{
+    max-width: 100%;
+    display: block;
+}
 @media screen and (max-width: 800px){
     .diferencial{width: 100%;
     margin-bottom: 20px;
@@ -308,4 +337,7 @@ section.team .habi{
     }
     .conteudo {width: 100%; margin: 20px 20px;}
 
+    .conquista{
+        margin: 50px;
+    }
 }
