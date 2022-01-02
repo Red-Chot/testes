@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.center{
+    max-width:  1200px;
+    margin: auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+header{
+    background-color: white;
+    padding: 25px 0;
+    /*border-bottom: 10px solid rgb(204, 200, 200);*/
+
+}
+
+.logos{
+    color: rgba(42, 139, 193, 25);
+    margin: 15px 0;
+    margin-right: 160px;
+}
+
+.logos h2 {
+    font-weight: normal;
+    font-size:  25px;
+}
+
+.menu{
+    width:  70%;
+    text-align: right;
+    margin: 15px 0;
+}
+
+.menu a{
+    color: #124265
+    font-size 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 25px;
+    transition: 0.6s; 
+}
+
+.menu a:hover {
+    color:  #007bff;
+
+}
+
+.menu .botao {
+    background-color: rgba(42, 139, 193);
+    display: inline-block;
+    padding: 7px 50px;
+    border-radius: 9px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu .botao:hover{
+    background-color: #2371a8;
+    color: white;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------MAIN-------------------------------------------------------*/
+
+section.main{
+    background-image: url('/javascrip/projetos/fotos/startup-gdcdf1a0d3_1920.jpg');
+
+    padding: 150px 0;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.img-main{
+    background-color:rgba(255, 255, 255, 0.700);
+    display: flex;
+}
+
+.main-text{
+    margin: 130px;
+    background-color: rgba(255, 255, 255, 0.700);
+    border-radius: 15px;
+    padding: 7px 6px;
+    border-radius: 300px;
+    margin-top: 180px;
+}
+
+.main-text i{
+    font-size: 23px;
+}
+
+
+@media screen and (max-width: 800px){
+    .diferencial{width: 100%;
+    margin-bottom: 20px;
+    }
+    .menu{
+        display: none;
+    }
+    .logos{
+        width: 20%;
+    }
+    .menu-mobile{
+        width: 90%; 
+        text-align: right;
+        margin-top: -52px;
+        display: block;
+    }
+
+    .menu-mobile a{
+        padding: 15px;
+    }
+
+    .menu-mobile i{
+        cursor: pointer;
+        font-size: 23px;
+        margin-top: 8px;
+    }
+    .conteudo {width: 100%; margin: 20px 20px;}
+
+    .conquista{
+        margin: 50px;
+    }
+
+}
+
+.menu-items{
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-bottom: 2px solid blue;
+    display: block;
+    opacity: 0;
+    transition: 1s;
+}
+
+.menu-items.show{
+    opacity: 1;
+}
+
+.menu-items.hide{
+    opacity: 0;
+}
+
+.menu-items a{
+    display: block;
+    text-decoration: none;
+    color: blue;
+}

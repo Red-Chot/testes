@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sobre.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/029d193761.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="center">
+            <div class="logos">
+                <h2>Akatsuki.serv</h2>
+            </div>
+            <div class="menu"> 
+                <a href="/javascrip/projetos/index.html"> HOME</a>
+                <a href="/javascrip/projetos/sobre/sobre.html"> Sobre nós</a>
+                <a href="/javascrip/projetos/formularios/formulario.html"> Formulários</a>
+                <a href="/javascrip/projetos/jogos/jogos.html"> Jogos</a>
+                <a class="botao"  href="https://discord.gg/qukv8aazn2"> 
+                    Entrar
+                </a>
+            </div>
+        <div class="menu-mobile">
+            <i class="fas fa-bars menu-mobile-icon"></i>
+            <div class="menu-items">
+                <a href="/javascrip/projetos/index.html">Home</a>
+                <a href="/javascrip/projetos/sobre/sobre.html">Sobre nós</a>
+                <a href="/javascrip/projetos/formularios/formulario.html">Formulários</a>
+                <a href="/javascrip/projetos/jogos/jogos.html">Jogos</a>
+                <a href="https://discord.gg/qukv8aazn2">Entrar</a>
+            </div>
+        </div>
+        </div> <!--centro-->
+
+
+        <div class="img-main">
+        <section class="main">
+            <div class="main-t">
+                <div class="main-text">
+                    <h2>Aqui tem um pouco de nossa essência </h2>
+                    <i class="fas fa-users"></i>
+                </div>
+
+            </div>
+        </section>
+        </div>
+
+
+
+        <section>
+
+            <script>
+                var el = document.querySelector('.menu-mobile-icon')
+                el.addEventListener('click',()=>{
+                    var menuItems = document.querySelector('.menu-items');
+                    if(menuItems.classList.contains('show')){
+                    menuItems.classList.add('hide')
+                    menuItems.classList.remove('show')
+                }
+                    else{
+                        menuItems.classList.add('show')
+                        menuItems.classList.remove('hide')
+                    }
+        
+                });
+            </script>
+        
+        </section>
+
+        
+</body>
+</html>
