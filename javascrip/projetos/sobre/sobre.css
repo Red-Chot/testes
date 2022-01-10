@@ -76,7 +76,7 @@ header{
 section.main{
     background-image: url('/javascrip/projetos/fotos/startup-gdcdf1a0d3_1920.jpg');
 
-    padding: 150px 0;
+    padding: 100px 0;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -101,6 +101,10 @@ section.main{
 
 .main-text i{
     font-size: 23px;
+}
+
+.adms{
+    display: inline-flex;
 }
 
 .png{
