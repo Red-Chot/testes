@@ -7,7 +7,7 @@
 }
 
 .center{
-    max-width:  1200px;
+    max-width:  1300px;
     margin: auto;
     padding: 0 2%;
     display: flex;
@@ -103,7 +103,33 @@ section.main{
     font-size: 23px;
 }
 
+.png{
+    background-image: url(/javascrip/projetos/fotos/texture-g02a3dce74_1920.jpg);
+    padding: 150px 0;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.scrip{
+    color: black;
+    margin-left: 150px;
+}
+
+
+.scrip p{
+    font-size: 20px;
+    
+}
+
 @media screen and (max-width: 800px){
+
+    .logos{
+        margin-left: 25px;
+    }
+
     .diferencial{width: 100%;
     margin-bottom: 20px;
     }
@@ -134,6 +160,11 @@ section.main{
     .conquista{
         margin: 50px;
     }
+
+    .scrip{
+        margin-left: 20px;
+    }
+
 }
 
 .menu-items{
