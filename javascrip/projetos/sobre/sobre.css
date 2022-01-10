@@ -103,8 +103,30 @@ section.main{
     font-size: 23px;
 }
 
+.sobre-main{
+    display: block;
+    margin-top: 30px;
+    padding: 60px;
+    text-align: center;
+    margin: auto;
+    margin-left:-20px;
+    
+}
+
 .adms{
-    display: inline-flex;
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.admin{
+    margin-bottom: 30px;
+}
+
+.admin h2{
+    color: #124265;
 }
 
 .png{
