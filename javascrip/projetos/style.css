@@ -7,7 +7,7 @@
 }
 
 .center{
-    max-width:  1200px;
+    max-width:  1300px;
     margin: auto;
     padding: 0 2%;
     display: flex;
@@ -40,6 +40,7 @@ header{
     width:  70%;
     text-align: right;
     margin: 15px 0;
+
 }
 
 .menu a{
@@ -119,10 +120,10 @@ section.main{
 }
 
 .diferencas{
-
     display: flex;
     flex-wrap: wrap;
     margin-left: 20px;
+ 
 }
 
 .diferencial{
@@ -153,6 +154,10 @@ section.main{
 
 }
 
+.diferencial a{
+    display: flex;
+  
+}
 section.sobre {
     padding: 80px 0;
 }
@@ -322,9 +327,11 @@ margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
 }
 
 .scrip{
+    
     margin-left: 200px;
     
 }
@@ -332,14 +339,19 @@ margin: 0 auto;
 .rodae{
     display: flex;
     filter: none;
-    
 }
 
 .scrip p{
     font-size: 20px;
+    
 }
 
 @media screen and (max-width: 800px){
+
+    .logos{
+        margin-left: 25px;
+    }
+    
     .diferencial{width: 100%;
     margin-bottom: 20px;
     }
@@ -369,5 +381,9 @@ margin: 0 auto;
 
     .conquista{
         margin: 50px;
+    }
+
+    .scrip{
+        margin-left: 20px;
     }
 }

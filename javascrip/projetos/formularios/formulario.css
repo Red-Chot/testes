@@ -7,7 +7,7 @@
 }
 
 .center{
-    max-width:  1200px;
+    max-width:  1300px;
     margin: auto;
     padding: 0 2%;
     display: flex;
@@ -19,7 +19,7 @@
 }
 
 header{
-    background-color: white;
+    background-color: rgba(206,206,206,255);
     padding: 25px 0;
     /*border-bottom: 10px solid rgb(204, 200, 200);*/
 
@@ -104,13 +104,91 @@ section.main{
 
 .main-text i{
     font-size: 23px;
+    margin-left: 25px;
+}
+
+.formularios{
+    padding: 10px;
+    margin-left: 95px;
+}
+
+.diferencas{
+    
+    display: inline-flex;
+    margin: 10px;
+    
+    }
+
+.diferencial{
+    
+    margin-top: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.750);
+    width: 23%;
+    margin-right: 2%;
+    padding: 50px 20px;
+    margin-bottom: 25px ;
+}
+.diferencial i{
+    color: #124265;
+    font-size: 23px;
+    text-align: center;
+}
+
+.diferencial h2{
+    color: #124265;
+    margin: 5px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.diferencial p{
+    font-size: 15px;
+    color: gray;
+    line-height: 30px;
+
+}
+
+.png{
+    background-image: url(/javascrip/projetos/fotos/texture-g02a3dce74_1920.jpg);
+    padding: 150px 0;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.scrip{
+    color: black;
+    margin-left: 150px;
+}
+
+
+.scrip p{
+    font-size: 20px;
     
 }
 
 
 @media screen and (max-width: 800px){
+
+    .logos{
+        margin-left: 25px;
+    }
+
+    .formularios{
+        margin-left: 0px;
+    }
+
+    .diferencas{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .diferencial{width: 100%;
     margin-bottom: 20px;
+    
     }
     .menu{
         display: none;
@@ -139,6 +217,11 @@ section.main{
     .conquista{
         margin: 50px;
     }
+
+    .scrip{
+        margin-left: 20px;
+    }
+
 }
 
 .menu-items{
