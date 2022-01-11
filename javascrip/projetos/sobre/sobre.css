@@ -71,6 +71,7 @@ header{
     cursor: pointer;
 }
 
+
 /*---------------------------------------------------MAIN-------------------------------------------------------*/
 
 section.main{
@@ -131,10 +132,14 @@ margin: 0 auto;
 
 .imagem{
     background-image: url(/javascrip/projetos/fotos/CAPI.png);
-    padding: 250px 0;
-    margin-left: -15px;
+    width: 100%;
+    padding: 350px 0;
+    margin-top: -15px;
     display: flex;
     flex-wrap: wrap;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .png{
@@ -202,7 +207,6 @@ margin: 0 auto;
     .imagem{
         background-image: url(/javascrip/projetos/fotos/CAPI-MENOR.jpg);
         padding: 250px;
-        margin-left: -135px;
     }
 
 }

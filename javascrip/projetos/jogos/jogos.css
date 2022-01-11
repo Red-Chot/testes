@@ -103,6 +103,15 @@ section.main{
     font-size: 23px;
 }
 
+.main-jogos{
+    text-align: center;
+    padding: 50px;
+    color: #124265;
+    
+}
+
+
+
 .png{
     background-image: url(/javascrip/projetos/fotos/texture-g02a3dce74_1920.jpg);
     padding: 150px 0;

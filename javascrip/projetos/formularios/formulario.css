@@ -116,6 +116,7 @@ section.main{
     
 }
 
+
 .diferencas{
     
     display: inline-flex;
@@ -148,6 +149,12 @@ section.main{
 
 }
 
+.diferencial:hover{
+    border: -2px solid rgba(255, 255, 255, 0.750);
+    color: steelblue;
+    box-shadow: 0px 0px 20px rgb(238, 238, 238), 0px 0px 35px rgb(160, 212, 233) inset;
+    
+}
 
 .png{
     background-image: url(/javascrip/projetos/fotos/texture-g02a3dce74_1920.jpg);
