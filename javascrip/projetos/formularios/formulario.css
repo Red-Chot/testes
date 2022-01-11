@@ -76,7 +76,7 @@ header{
 section.main{
     background-image: url('/javascrip/projetos/fotos/abstract-3291293.jpg');
 
-    padding: 150px 0;
+    padding: 50px 0;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -107,9 +107,14 @@ section.main{
     margin-left: 25px;
 }
 
+.formulario-color{
+    background-color: #124265;
+}
+
 .formularios{
     padding: 10px;
-    margin-left: 95px;
+   margin-left: 42px;
+    
 }
 
 .diferencas{

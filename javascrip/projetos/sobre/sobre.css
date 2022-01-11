@@ -129,6 +129,12 @@ margin: 0 auto;
     color: #124265;
 }
 
+.imagem{
+    background-image: url(/javascrip/projetos/fotos/CAPI.png);
+    padding: 250px 0;
+    margin-left: -15px;
+}
+
 .png{
     background-image: url(/javascrip/projetos/fotos/texture-g02a3dce74_1920.jpg);
     padding: 150px 0;
