@@ -75,7 +75,6 @@ header{
 
 section.main{
     background-image: url('/javascrip/projetos/fotos/abstract-3291293.jpg');
-
     padding: 50px 0;
     background-position: top;
     background-size: cover;
@@ -104,7 +103,6 @@ section.main{
 
 .main-text i{
     font-size: 23px;
-    margin-left: 25px;
 }
 
 .formulario-color{
@@ -113,7 +111,8 @@ section.main{
 
 .formularios{
     padding: 10px;
-   margin-left: 42px;
+    margin-left: 272px;
+    text-align: center;
     
 }
 
@@ -134,11 +133,6 @@ section.main{
     padding: 50px 20px;
     margin-bottom: 25px ;
 }
-.diferencial i{
-    color: #124265;
-    font-size: 23px;
-    text-align: center;
-}
 
 .diferencial h2{
     color: #124265;
@@ -148,15 +142,16 @@ section.main{
 }
 
 .diferencial p{
-    font-size: 15px;
+    font-size: 16px;
     color: gray;
     line-height: 30px;
 
 }
 
+
 .png{
     background-image: url(/javascrip/projetos/fotos/texture-g02a3dce74_1920.jpg);
-    padding: 150px 0;
+    padding: 130px 0;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
