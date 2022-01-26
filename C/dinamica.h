@@ -1,6 +1,6 @@
 #include <stddef.h>
 #include <stdio.h>
-
+#include <stdlib.h>
 
 typedef struct lista
 {
@@ -13,7 +13,9 @@ Lista* criaLista(){
     return NULL;
 }
 
-Lista* insereListaInicio(Lista *1, int i) {
+Lista* insereListaInicio(Lista *l, int i) {
     Lista *novo = (Lista*) malloc(sizeof(Lista));
-
+    novo ->info = i;
+    novo -> prox = l;
+    return novo;
 }
