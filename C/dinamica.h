@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdio.h>
 
 
 typedef struct lista
@@ -12,4 +13,7 @@ Lista* criaLista(){
     return NULL;
 }
 
-Lista * insereListao
+Lista* insereListaInicio(Lista *1, int i) {
+    Lista *novo = (Lista*) malloc(sizeof(Lista));
+
+}
