@@ -19,3 +19,26 @@ Lista* insereListaInicio(Lista *l, int i) {
     novo -> prox = l;
     return novo;
 }
+
+int ListaVazia(Lista *l)
+{
+    return (l== NULL);
+    
+}
+
+void imprimeLista (Lista *l)
+{   
+    if (ListaVazia(l))
+    printf("Lista vazia!");
+    else
+    {
+    
+    Lista *t;
+    for (t = l; t!=NULL ;t= t->prox)
+    {
+        printf ("\n Info %d", t->info);
+    }
+    }
+
+}
+
