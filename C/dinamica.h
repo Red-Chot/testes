@@ -29,7 +29,7 @@ int ListaVazia(Lista *l)
 void imprimeLista (Lista *l)
 {   
     if (ListaVazia(l))
-    printf("Lista vazia!");
+    printf("Lista vazia!\n");
     else
     {
     
@@ -39,6 +39,26 @@ void imprimeLista (Lista *l)
         printf ("\n Info %d", t->info);
     }
     }
+}
 
+Lista* BuscaLista (Lista *l, int v)
+{   
+    if (ListaVazia(l))
+    printf("Lista vazia!\n");
+    else
+    {
+    
+    Lista *t;
+    for (t = l; t!=NULL ;t= t->prox)
+    {
+        if(t->info == v)
+        {        
+        printf("\n%d foi encontrado",t->info);
+        return t;
+        }
+    }
+    printf("Elemento nao encontrado\n");
+    }
+    return NULL;
 }
 
