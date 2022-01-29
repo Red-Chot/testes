@@ -62,7 +62,7 @@ Lista* BuscaLista (Lista *l, int v)
     return NULL;
 }
 
-void removeListaPrimeiro(Lista *l)
+Lista* removeListaPrimeiro(Lista *l)
 {
     if (ListaVazia(l))
     printf("Lista vazia!, não pode ser removido\n");
@@ -72,6 +72,8 @@ void removeListaPrimeiro(Lista *l)
         t=l;
         l = l->prox;
         free(t);
-
+        return l;
     }
 }
+
+//54

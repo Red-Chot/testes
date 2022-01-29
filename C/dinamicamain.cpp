@@ -9,6 +9,7 @@ int main ()
     aLista = insereListaInicio(aLista, 23);
     aLista = insereListaInicio(aLista, 45);
     aLista = insereListaInicio(aLista, -9);
+    aLista = removeListaPrimeiro(aLista);
     imprimeLista (aLista);
     return 0; 
 }
