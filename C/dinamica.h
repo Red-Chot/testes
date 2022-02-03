@@ -23,7 +23,6 @@ Lista* insereListaInicio(Lista *l, int i) {
 int ListaVazia(Lista *l)
 {
     return (l== NULL);
-    
 }
 
 void imprimeLista (Lista *l)
