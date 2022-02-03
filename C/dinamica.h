@@ -65,7 +65,7 @@ Lista* BuscaLista (Lista *l, int v)
 Lista* removeListaPrimeiro(Lista *l)
 {
     if (ListaVazia(l))
-    printf("Lista vazia!, não pode ser removido\n");
+        printf("Lista vazia!, não pode ser removido\n");
     else
     {
         Lista *t;
@@ -76,4 +76,53 @@ Lista* removeListaPrimeiro(Lista *l)
     }
 }
 
-//54
+Lista *removeListaNoMeio (Lista *l, int v)
+{
+    if (ListaVazia(l))
+        printf("Lista vazia!, não pode ser removido\n");
+    else
+    {
+        Lista *ant = NULL;
+        Lista *t = l;
+        while (t != NULL && t->info !=v)
+        {
+            ant = t;
+            t = t->prox;
+        }
+        if (t == NULL)          //NAO EXISTE
+        {
+            printf ("\nNão encontrado %d", v);
+            return l;
+        }
+        else
+        {   
+            if(ant == NULL)     //PRIMEIRO
+            {
+                l = t->prox;
+                printf("\nelemento removido %d",v);
+            }
+            else                //MEIO
+            {
+                ant->prox = t->prox;
+                printf("\nelemento removido %d",v);
+            }
+            free (t);
+            return l;
+        }
+
+    }
+}
+
+void liberaLista(Lista *l)
+{
+    Lista *t = l, *p;
+    while (t != NULL)
+    {
+        p = t->prox;
+        free (t);
+        t = p;
+    }
+    
+}
+
+//1:27

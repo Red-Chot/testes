@@ -3,13 +3,21 @@
 
 int main ()
 {
+    int num;
+
     Lista*aLista;
     aLista = criaLista();
     imprimeLista(aLista);
     aLista = insereListaInicio(aLista, 23);
     aLista = insereListaInicio(aLista, 45);
+    aLista = insereListaInicio(aLista, 29);
     aLista = insereListaInicio(aLista, -9);
     aLista = removeListaPrimeiro(aLista);
     imprimeLista (aLista);
+    printf ("\nDigite o valor a ser removido\n");
+    scanf ("%d", &num);
+    aLista = removeListaNoMeio(aLista, num);
+    imprimeLista(aLista);
+    liberaLista (aLista);
     return 0; 
 }
