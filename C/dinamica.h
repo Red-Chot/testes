@@ -125,4 +125,30 @@ void liberaLista(Lista *l)
     
 }
 
+Lista *insereListaOrdenada(Lista *l, int v)
+{
+    Lista *novo;
+    Lista *ant = NULL;
+    Lista *p = l;
+
+    while (p != NULL && p->info <v)
+    {
+        ant=p;
+        p = p->prox;
+    }
+    novo= (Lista*) malloc(sizeof(Lista));
+    novo->info = v;
+    if (ant == NULL)
+    {
+        novo->prox = l;
+        l=novo;
+    }
+    else
+    {
+        novo->prox=ant->prox;
+        ant->prox = novo;
+    }
+    return l;
+}
+
 //1:27

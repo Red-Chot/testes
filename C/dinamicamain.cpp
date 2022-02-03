@@ -19,5 +19,11 @@ int main ()
     aLista = removeListaNoMeio(aLista, num);
     imprimeLista(aLista);
     liberaLista (aLista);
+    aLista = criaLista();
+    aLista = insereListaOrdenada(aLista, 23);
+    aLista = insereListaOrdenada(aLista, 45);
+    aLista = insereListaOrdenada(aLista, -9);
+    imprimeLista(aLista);
+    liberaLista (aLista);
     return 0; 
 }
