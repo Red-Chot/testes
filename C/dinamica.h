@@ -24,12 +24,14 @@ Lista* insereListaInicio(Lista *l, int i) {
 
 
 Lista* insereListaFinal(Lista*l, int i)
-{
-    Lista *novo = (Lista*) malloc(sizeof(Lista));
-    if (l == NULL)
-    {
-        novo->info = 
-    }
+{   
+    Lista *l = (Lista*) malloc(sizeof(Lista));
+        if (l == NULL)
+        printf("Lista nao existe");
+        else
+        {
+            Lista *no = (Lista*)
+        }
 }
 
 
