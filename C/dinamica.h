@@ -20,20 +20,35 @@ Lista* insereListaInicio(Lista *l, int i) {
     return novo;
 }
 
+Lista* insereListaFinal(Lista*l, int v)
+{
+    if (l == NULL) printf("Nao inserido");
+    {
+    Lista *no = (Lista*) malloc(sizeof(Lista));
+    }
 
+    if(*no == NULL)
+    {
+    no->info = v;
+    no->prox = NULL;
 
-
-Lista* insereListaFinal(Lista*l, int i)
-{   
-    Lista *l = (Lista*) malloc(sizeof(Lista));
-        if (l == NULL)
-        printf("Lista nao existe");
+        if ((*l) == NULL)
+        {
+            *l = no;
+        }
         else
         {
-            Lista *no = (Lista*)
+            Lista *aux = *l;
+            while (aux ->prox !=NULL)
+            {
+                aux = aux->prox
+            }
+            aux->prox = no;
         }
+        return l;
+    }
+    
 }
-
 
 
 
