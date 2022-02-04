@@ -20,6 +20,22 @@ Lista* insereListaInicio(Lista *l, int i) {
     return novo;
 }
 
+
+
+
+Lista* insereListaFinal(Lista*l, int i)
+{
+    Lista *novo = (Lista*) malloc(sizeof(Lista));
+    if (l == NULL)
+    {
+        novo->info = 
+    }
+}
+
+
+
+
+
 int ListaVazia(Lista *l)
 {
     return (l== NULL);
