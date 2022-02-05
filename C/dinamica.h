@@ -20,37 +20,12 @@ Lista* insereListaInicio(Lista *l, int i) {
     return novo;
 }
 
-Lista* insereListaFinal(Lista*l, int v)
+void insereListaFinal(Lista *lista, int valor)
 {
-    if (l == NULL) printf("Nao inserido");
-    {
-    Lista *no = (Lista*) malloc(sizeof(Lista));
-    }
-
-    if(*no == NULL)
-    {
-    no->info = v;
-    no->prox = NULL;
-
-        if ((*l) == NULL)
-        {
-            *l = no;
-        }
-        else
-        {
-            Lista *aux = *l;
-            while (aux ->prox !=NULL)
-            {
-                aux = aux->prox
-            }
-            aux->prox = no;
-        }
-        return l;
-    }
-    
+    No *novo = (No*)malloc(sizeof(No));
+    novo->valor = valor;
+    novo->prox = NULL;
 }
-
-
 
 
 int ListaVazia(Lista *l)
@@ -183,4 +158,3 @@ Lista *insereListaOrdenada(Lista *l, int v)
     return l;
 }
 
-//1:27

@@ -27,3 +27,5 @@ int main ()
     liberaLista (aLista);
     return 0; 
 }
+
+
