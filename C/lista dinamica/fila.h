@@ -17,22 +17,9 @@ Lista* criaLista(){
 }
 
 Lista* insereListaInicio(Lista *l, int i) {
-    Lista *aux;
     Lista *novo = (Lista*) malloc(sizeof(Lista));
     novo ->info = i;
-    novo->prox = l;
-    if(l==NULL)
-        novo->prox=novo;
-    
-    else
-    {
-        aux =l;
-        do{
-            aux=aux->prox;
-        }while (aux->prox != l);
-        aux->prox = novo;
-    }   
-
+    novo -> prox = l;
     return novo;
 }
 
@@ -49,16 +36,15 @@ void imprimeLista (Lista *l)
     else
     {
     
-    Lista *t = l;
-        do
-        {
+    Lista *t;
+        int aux;
+        for (t = l; t!=NULL ;t= t->prox)
+        {   
             printf ("\n Info %d\n", t->info);
-            t=t->prox;
-        }while(t != l);
+        
     }
-    
+    }
 }
-
 Lista* BuscaLista (Lista *l, int v)
 {   
     if (ListaVazia(l))
@@ -66,34 +52,28 @@ Lista* BuscaLista (Lista *l, int v)
     else
     {
     
-        Lista *t = l;
-            do
+        Lista *t;
+            for (t = l; t!=NULL ;t= t->prox)
             {
                 if(t->info == v)
-                {        
-                    printf("\n%d foi encontrado",t->info);
-                    return t;
-                }
-                t=t->prox;
-            }while(t != l);
+            {        
+            printf("\n%d foi encontrado",t->info);
+            return t;
+        }
     }
         printf("\nElemento nao encontrado\n");
+    }
     return NULL;
 }
 
 Lista* removeListaPrimeiro(Lista *l)
 {
     if (ListaVazia(l))
-        printf("\nPilha vazia!, não pode ser removido\n");
+        printf("\nLista vazia!, não pode ser removido\n");
     else
     {
-        Lista *t, *aux ;
-        aux = l;
-        do{
-            aux=aux->prox;
-        }while (aux->prox != l);
+        Lista *t;
         t=l;
-        aux->prox = t->prox;
         l = l->prox;
         free(t);
         return l;
@@ -103,7 +83,7 @@ Lista* removeListaPrimeiro(Lista *l)
 Lista *removeListaNoMeio (Lista *l, int v)
 {
     if (ListaVazia(l))
-        printf("\nPilha vazia!, não pode ser removido\n");
+        printf("\nLista vazia!, não pode ser removido\n");
     else
     {
         Lista *ant = NULL;
@@ -149,9 +129,36 @@ void liberaLista(Lista *l)
     
 }
 
+Lista *insereListaOrdenada(Lista *l, int v)
+{
+    Lista *novo;
+    Lista *ant = NULL;
+    Lista *p = l;
+
+    while (p != NULL && p->info <v)
+    {
+        ant=p;
+        p = p->prox;
+    }
+    novo= (Lista*) malloc(sizeof(Lista));
+    novo->info = v;
+    if (ant == NULL)
+    {
+        novo->prox = l;
+        l=novo;
+    }
+    else
+    {
+        novo->prox=ant->prox;
+        ant->prox = novo;
+    }
+    return l;
+}
+
+
 int vazia(Lista *LISTA)
 {
- if(LISTA->prox == novo)
+ if(LISTA->prox == NULL)
   return 1;
  else
   return 0;
@@ -174,21 +181,20 @@ Lista *aloca()
 
 void insereFim(Lista *LISTA)
 {
- Lista *aux;
- aux = LISTA;
+
  Lista *novo=aloca();
- novo->prox = aux;
+ novo->prox = NULL;
 
  if(vazia(LISTA))
   LISTA->prox=novo;
  else{
   Lista *tmp = LISTA->prox;
 
-  while(tmp->prox != aux)
+  while(tmp->prox != NULL)
    tmp = tmp->prox;
 
   tmp->prox = novo;
-  novo->prox=aux;
+  novo->prox=NULL;
  }
 }
 
@@ -200,12 +206,12 @@ int menu_lista (int Resp=0)
     {
         
             
-                printf ("\n--Escolha uma opção:--\n 1- Adicione um elemento no fim.");
+                printf ("\n--Escolha uma opcao:--\n 1- Adicione um elemento no fim.");
                 printf ("\n 2- Remover elemento do início.");
-                printf ("\n 3- Buscar na pilha.");
-                printf ("\n 4- Apagar pilha.");
-                printf ("\n 5- Imprime pilha");
-                printf ("\n 6- Sair da pilha.\n");
+                printf ("\n 3- Buscar na lista.");
+                printf ("\n 4- Apagar lista.");
+                printf ("\n 5- Imprime lista");
+                printf ("\n 6- Sair lista.\n");
                 scanf ("%d", &Resp);
         
                 return Resp;

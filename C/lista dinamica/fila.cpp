@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "pilha.h"
+#include "fila.h"
 #include <locale.h>
 #include <conio.h>
 
@@ -15,6 +15,7 @@ int main ()
     {
         Lista*aLista;
         aLista = criaLista();
+        aLista = insereListaInicio(aLista, NULL);
         while (sair == 1){
             int valor=0;
             Resp = menu_lista();
@@ -51,3 +52,5 @@ int main ()
     system ("PAUSE");
     return 0; 
 }
+
+
