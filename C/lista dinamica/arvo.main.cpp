@@ -4,7 +4,7 @@
 
 int main()
 {
-    Node *raiz = NULL
+    Node *raiz = NULL;
 
 
     return 0;
