@@ -1,60 +1,57 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
+#include <stddef.h>
 
 struct item
 {
-    int cod;
+    int info;
 };
 
 typedef struct item Item;
 
 struct node
-{
+{   
     Item item;
-    struct node *left;
-    struct node *right;
-    
+    struct node *esq;
+    struct node *dir;
 };
 
 typedef node Node;
 
-Node *inicializa()
+Node *start()
 {
     return NULL;
 }
 
-Item create(int cod)
+Item criar(int info)
 {
     Item item;
-    item.cod = cod;
+    item.info = info;
     return item;
 }
 
-Node *inserir(Node *raiz, Item x)
+Node *inserir(Node *raiz, Item novo)  // inserindo elementos
 {   
     int resp;
     if (raiz == NULL)
     {
         Node*aux =(Node*)malloc(sizeof(Node));
-        aux ->item = x;
-        aux->left = NULL;
-        aux->right= NULL;
+        aux ->item = novo;
+        aux->dir= NULL;
+        aux->esq = NULL;
         return aux;
     }
     else
     {   
-        printf("\nDeseja adicionar a direita ou esquerda? 1/DIREITA | 2/ESQUERDA\n");
-        scanf ("%d",&resp);
-        if (resp == 1)
+        if(novo.info > raiz->item.info)
         {
-            raiz->right =inserir(raiz->right,x);
+            raiz->dir = inserir(raiz->dir,novo );
         }
-        else if (resp == 2)
+        else if (novo.info < raiz->item.info)
         {
-            raiz->left =inserir(raiz->left,x);
+            raiz->esq = inserir(raiz->esq,novo );
         }
-        
-
     }
     return raiz;
 }
@@ -63,98 +60,107 @@ void imprimir(Node *raiz)
 {
     if(raiz != NULL)
     {
-        printf("%d ",raiz->item.cod);
-        imprimir(raiz->left);
-        imprimir(raiz->right);
+        printf("\n-----------------------------------------------------------\n");
+        printf(" %d",raiz->item.info);
+        imprimir(raiz->dir);
+        imprimir(raiz->esq);
+        printf("\n-----------------------------------------------------------\n");
     }
 }
 
-void libera(Node *raiz)
+void libera(Node *cod)
 {
-    if(raiz != NULL)
+    if(cod != NULL)
     {
-        libera(raiz->left);
-        libera(raiz->right);
-        free(raiz);
+        libera(cod->esq);
+        libera(cod->dir);
+        free(cod);
     }
 }
 
-Node *procurar(Node *raiz, int cod)
+Node *arvBusca(Node *raiz, int info)
 {
     if(raiz != NULL)
     {
-        if(raiz->item.cod == cod){
+        if(raiz->item.info == info){
         return raiz;
         }
-        else 
+        else if (raiz == NULL)
         {
-            Node *i;
-            i = procurar(raiz->right, cod);
-            if(i!= NULL)
-            return procurar(raiz->right, cod);
-            if(i == NULL)
-            return procurar(raiz->left,cod);
+            if (info > raiz->item.info) 
+            {
+                return arvBusca(raiz->dir,info);
+            }
+            else
+            {
+                return arvBusca(raiz->esq,info);
+            }
         }
         
     }
     return NULL;
 }
 
+
 Node *menorElemento(Node *raiz)
 {
     if (raiz != NULL)
     {
-        Node *aux= raiz;
-        while (aux ->left != NULL)
+        Node *Raiz= raiz;
+        while (Raiz ->esq != NULL)
         {
-            aux= aux->left;
+            Raiz= Raiz->dir;
         }
-        return aux;
+        return Raiz;
     } 
     return NULL;
 }
 
-Node *deletar (Node *raiz, int cod)
+Node *deletar (Node *raiz, int info)
 {
     if (raiz != NULL)
     {
-        Node *i;
-        i = procurar(raiz->right, cod);
-            if(i!=NULL)
-                raiz->right = deletar(raiz->right, cod);
-            else if (i== NULL)
-                raiz->left = deletar(raiz->left, cod);
+            if(info >raiz->item.info)
+                raiz->dir = deletar(raiz->dir, info);
+            else if (info< raiz->item.info)
+                raiz->esq = deletar(raiz->esq, info);
             else
             {
-                if(raiz->right == NULL && raiz->left == NULL)
-                {
+                if(raiz->dir == NULL && raiz->esq == NULL)
+                {   
+                    Node *i;
                     free(raiz);
-                    return NULL;
+                    i = NULL;
+                    return i;
                 }
-                else if(raiz->right == NULL && raiz->left != NULL)
-                {
-                    Node *aux = raiz->right;
+                else if(raiz->dir == NULL && raiz->esq != NULL)
+                {   
+                    Node *i;
+                    Node *Raiz = raiz->esq;
                     free (raiz);
-                    return aux; 
+                    i = raiz;
+                    return i; 
                 }
-                else if(raiz->right != NULL && raiz->left == NULL)
-                {
-                    Node *aux = raiz->left;
+                else if(raiz->dir != NULL && raiz->esq == NULL)
+                {   
+                    Node *i;
+                    Node *Raiz = raiz->dir;
                     free(raiz);
-                    return aux;
+                    i = raiz;
+                    return i;
                 }
                 else
-                {
-                    Node *aux = menorElemento(raiz->left);
-                    Item itemAux = aux->item;
-                    raiz = deletar(raiz,itemAux.cod);
+                {   
+                    Node *i;
+                    Node *Raiz = menorElemento(raiz->dir);
+                    Item itemAux = Raiz->item;
+                    raiz = deletar(raiz,itemAux.info);
                     raiz->item = itemAux;
-                    return raiz;
+                    i = raiz;
+                    return i;
                 }
                 
-            }
-        return raiz;
+            }return raiz;
     }   
-    else
     return NULL;
 }

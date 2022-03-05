@@ -5,22 +5,22 @@
 
 int main()
 {
-    Node *raiz = inicializa();
-    raiz=inserir(raiz,create(10));
-    raiz=inserir(raiz,create(15));
-    raiz=inserir(raiz,create(20));
-    raiz=inserir(raiz,create(12));
-    raiz=inserir(raiz,create(5));
+    Node *Raiz = start();
+    Raiz =inserir(Raiz,criar(10));
+    Raiz =inserir(Raiz,criar(15));
+    Raiz =inserir(Raiz,criar(20));
+    Raiz =inserir(Raiz,criar(12));
+    Raiz =inserir(Raiz,criar(5));
 
-    imprimir(raiz);
+
+    
+    printf("Antes de remover\n");
+    imprimir(Raiz);
+    Raiz = deletar(Raiz,12);
     printf("\n");
-    imprimir(raiz);
-    raiz = deletar(raiz, 10);
-    imprimir (raiz);
-    libera(raiz);
-
-
-
+    printf("dps\n");
+    imprimir (Raiz);
+    libera(Raiz);
     return 0;
 }
 
