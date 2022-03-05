@@ -31,7 +31,7 @@ Item criar(int info)
     return item;
 }
 
-Node *inserir(Node *raiz, Item novo)  // inserindo elementos
+ Node *inserir(Node *raiz, item novo)  // inserindo elementos
 {   
     int resp;
     if (raiz == NULL)
@@ -56,7 +56,7 @@ Node *inserir(Node *raiz, Item novo)  // inserindo elementos
     return raiz;
 }
 
-void imprimir(Node *raiz)
+void imprimir(Node *raiz)       // imprimindo
 {
     if(raiz != NULL)
     {
@@ -68,7 +68,7 @@ void imprimir(Node *raiz)
     }
 }
 
-void libera(Node *cod)
+void libera(Node *cod)              //libera arvore
 {
     if(cod != NULL)
     {
@@ -78,7 +78,7 @@ void libera(Node *cod)
     }
 }
 
-Node *arvBusca(Node *raiz, int info)
+Node *arvBusca(Node *raiz, int info)        //busca arvore
 {
     if(raiz != NULL)
     {
@@ -100,7 +100,7 @@ Node *arvBusca(Node *raiz, int info)
     return NULL;
 }
 
-Node *menorElemento(Node *raiz)
+Node *Elemento(Node *raiz)             //procura elemento para substitituiçao
 {
     if (raiz != NULL)
     {
@@ -114,7 +114,7 @@ Node *menorElemento(Node *raiz)
     return NULL;
 }
 
-Node *deletar (Node *raiz, int info)
+Node *deletar (Node *raiz, int info)        //deleta
 {
     if (raiz != NULL)
     {
@@ -150,7 +150,7 @@ Node *deletar (Node *raiz, int info)
                 else
                 {   
                     Node *i;
-                    Node *Raiz = menorElemento(raiz->dir);
+                    Node *Raiz = Elemento(raiz->dir);
                     Item itemAux = Raiz->item;
                     raiz = deletar(raiz,itemAux.info);
                     raiz->item = itemAux;
@@ -162,3 +162,20 @@ Node *deletar (Node *raiz, int info)
     }   
     return NULL;
 }
+
+
+int menu_lista (int Resp=0)
+    {
+        
+            
+                printf ("\n--Escolha uma opcao:--\n 1- Adicione um elemento.");
+                printf ("\n 2- Remover elemento.");
+                printf ("\n 3- Buscar na lista.");
+                printf ("\n 4- Apagar lista.");
+                printf ("\n 5- Imprime lista");
+                printf ("\n 6- Sair lista.\n");
+                scanf ("%d", &Resp);
+        
+                return Resp;
+    }
+
