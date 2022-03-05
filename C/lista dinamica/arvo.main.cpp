@@ -4,15 +4,23 @@
 
 
 int main()
-{
+{   
+
     Node *Raiz = start();
     Raiz =inserir(Raiz,criar(10));
     Raiz =inserir(Raiz,criar(15));
     Raiz =inserir(Raiz,criar(20));
     Raiz =inserir(Raiz,criar(12));
     Raiz =inserir(Raiz,criar(5));
-
-
+    Node *tmp = arvBusca(Raiz,3);
+    if (tmp == NULL)
+    {
+        printf("Nao encotramos\n");
+    }
+    else
+    {
+        printf("Encotramos\n");
+    }
     
     printf("Antes de remover\n");
     imprimir(Raiz);

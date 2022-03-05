@@ -64,7 +64,7 @@ void imprimir(Node *raiz)
         printf(" %d",raiz->item.info);
         imprimir(raiz->dir);
         imprimir(raiz->esq);
-        printf("\n-----------------------------------------------------------\n");
+        
     }
 }
 
@@ -82,25 +82,23 @@ Node *arvBusca(Node *raiz, int info)
 {
     if(raiz != NULL)
     {
-        if(raiz->item.info == info){
-        return raiz;
-        }
-        else if (raiz == NULL)
+        if(raiz->item.info == info)
         {
-            if (info > raiz->item.info) 
+            return raiz;
+        }
+        else
+        {
+            if (info >raiz->item.info)
             {
                 return arvBusca(raiz->dir,info);
             }
-            else
-            {
-                return arvBusca(raiz->esq,info);
-            }
+            else 
+            return arvBusca(raiz->esq,info);
         }
         
     }
     return NULL;
 }
-
 
 Node *menorElemento(Node *raiz)
 {
