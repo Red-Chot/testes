@@ -78,3 +78,83 @@ void libera(Node *raiz)
         free(raiz);
     }
 }
+
+Node *procurar(Node *raiz, int cod)
+{
+    if(raiz != NULL)
+    {
+        if(raiz->item.cod == cod){
+        return raiz;
+        }
+        else 
+        {
+            Node *i;
+            i = procurar(raiz->right, cod);
+            if(i!= NULL)
+            return procurar(raiz->right, cod);
+            if(i == NULL)
+            return procurar(raiz->left,cod);
+        }
+        
+    }
+    return NULL;
+}
+
+Node *menorElemento(Node *raiz)
+{
+    if (raiz != NULL)
+    {
+        Node *aux= raiz;
+        while (aux ->left != NULL)
+        {
+            aux= aux->left;
+        }
+        return aux;
+    } 
+    return NULL;
+}
+
+Node *deletar (Node *raiz, int cod)
+{
+    if (raiz != NULL)
+    {
+        Node *i;
+        i = procurar(raiz->right, cod);
+            if(i!=NULL)
+                raiz->right = deletar(raiz->right, cod);
+            else if (i== NULL)
+                raiz->left = deletar(raiz->left, cod);
+            else
+            {
+                if(raiz->right == NULL && raiz->left == NULL)
+                {
+                    free(raiz);
+                    return NULL;
+                }
+                else if(raiz->right == NULL && raiz->left != NULL)
+                {
+                    Node *aux = raiz->right;
+                    free (raiz);
+                    return aux; 
+                }
+                else if(raiz->right != NULL && raiz->left == NULL)
+                {
+                    Node *aux = raiz->left;
+                    free(raiz);
+                    return aux;
+                }
+                else
+                {
+                    Node *aux = menorElemento(raiz->left);
+                    Item itemAux = aux->item;
+                    raiz = deletar(raiz,itemAux.cod);
+                    raiz->item = itemAux;
+                    return raiz;
+                }
+                
+            }
+        return raiz;
+    }   
+    else
+    return NULL;
+}
