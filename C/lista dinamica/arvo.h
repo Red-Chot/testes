@@ -19,7 +19,7 @@ struct node
 
 typedef node Node;
 
-Node *start()
+0Node *start()
 {
     return NULL;
 }
